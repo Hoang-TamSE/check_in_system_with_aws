@@ -6,7 +6,7 @@ import sqlite3
 # to connect with hotel_data database
 
 def main():
-    connection = sqlite3.connect('./sql/user_data.db')
+    connection = sqlite3.connect('./user_data.db')
     connection.execute(''' CREATE TABLE user
 		(USERID TEXT PRIMARY KEY	 NOT NULL,
 		FNAME		 TEXT NOT NULL,

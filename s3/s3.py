@@ -1,14 +1,14 @@
 import boto3
 from botocore.exceptions import ClientError
 import logging
-import glob
+import glob2
 
 logger = logging.getLogger(__name__)
 bucket = 'facebucket1608'
 client = boto3.client('s3')
 
 def upload_images(folder_name):
-    photos = glob.glob(f"./{folder_name}/*.jpg")
+    photos = glob2.glob(f"./{folder_name}/*.jpg")
     print(photos)
     for photo in photos:
         print(photo)
